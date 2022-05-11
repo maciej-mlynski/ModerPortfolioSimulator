@@ -36,7 +36,7 @@ Here user can simulate thousends of different weights of his portfolio's assets.
 At this step user has 2 posibilities to find the best weights for his portfolio with given assets:
 
 1. He can select portfolio with the highest Sharp Ratio (calculated by dividind expected annual log return by expected annual volotality)
-2. Select max expected annual volatality for himself and find the one with highest return. 
+2. Select max expected annual volatality and find the one with highest return. 
 
 
 
