@@ -27,3 +27,34 @@ That was hardest part. Mainly becouse I would like to develop a tool that users 
 
 ### 4. Markowitz Portfolio Simulation
 
+Here user can simulate thousends of different weights of his portfolio's assets. Obviously he can select number of iterations he is intrested in. In this step it might take a while to get results. It depends on period, number of iterations and quantity of different stock that user selected priviously. 
+
+**Future improvements:** The tool is prepared mainly for index investing like ETF or BTC. However some of ETF has high correlation with each other. In the near future I would like to prepare a function that will check correlation between stock and exclude the markets with the lowest sharp ratio from the markets that are correlated above 80% with user permission.
+
+### 5. Find the best model for user
+
+At this step user has 2 posibilities to find the best weights for his portfolio with given assets:
+
+1. He can select portfolio with the highest Sharp Ratio (calculated by dividind expected annual log return by expected annual volotality)
+2. Select max expected annual volatality for himself and find the one with highest return. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
