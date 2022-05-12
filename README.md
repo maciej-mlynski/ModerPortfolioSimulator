@@ -40,7 +40,9 @@ At this step user has 2 posibilities to find the best weights for his portfolio 
 
 ![](https://github.com/maciej-mlynski/ModerPortfolioSimulator/blob/main/Img/MarkowitzModelSimulation.png?raw=true)
 
+The figure above prezents 30 000 different portfolio's annual log return vs expected volatility created by Markowitz simulation. 
 
+<h3 color='green'>Green star</h3> is portfolio with higherst Sharp Ratio
 
 
 
