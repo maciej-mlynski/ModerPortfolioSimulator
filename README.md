@@ -42,7 +42,7 @@ At this step user has 2 posibilities to find the best weights for his portfolio 
 
 The figure above prezents 30 000 different portfolio's annual log return vs expected volatility created by Markowitz simulation. 
 
-<h4 color = 'red' >Green star<h4> is portfolio with higherst Sharp Ratio
+<div color = 'red' >Green star is portfolio with higherst Sharp Ratio</div>
 
 
 
