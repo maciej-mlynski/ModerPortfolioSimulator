@@ -46,7 +46,11 @@ The figure above prezents 30 000 different portfolio's annual log return vs expe
 
 **Blue star** is portfolio with highest Return base on max acceptable volatality
 
-At this step user has to choese which portfolio want to analyze. 
+At this step user has to choese which portfolio wants to analyze. 
+
+### 6. Check portfolio weights over choesen period and do the rebalancing if necessary.
+
+In order for the Markowitz model portfolio must has specific weights over full period of invetment. Some of sotck might grow faster than another. In this step I created a function that do rebalancing. Unfortunetly, there is no point to rebalance portfolio whenever the weights sligtly change, mainly becouse of transaction cost and taxes. So we presumed that rebalancing should not be done more then one time in Quater (3 months) and not less than once a Year. User can choose which one is better for his specific case. 
 
 
 
