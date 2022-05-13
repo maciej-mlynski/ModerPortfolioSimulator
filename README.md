@@ -99,6 +99,8 @@ In this step we compare rebalanced portfolio with unbalanced one and with portfo
 5. Deliver more summary indicators.
 6. Benchmark your investment against a benchmark such as the S&P 500 (calculate beta)
 7. Check how the parameters would change if you invested a certain amount regularly
+8. Add: Sharp ratio with risk free rate or benchmark, add Sertino Ratio and give user posibilities to choose
+9. Calculate daily VARby var or Monte Carlo simulation and propose the size of the opposite position in order to protect the capital (Black Scholes Model)
 
 
 
