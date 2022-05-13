@@ -63,7 +63,19 @@ In order for the Markowitz model portfolio must has specific weights over full p
 ![](https://github.com/maciej-mlynski/ModerPortfolioSimulator/blob/main/Img/WeightsAfterRebalanceing.png?raw=true)
 
 
+### 7. Summary and comparison
 
+In this step we compare rebalanced portfolio with unbalanced one and with portfolio with equal weights. It is important becouse we want to know if Markowitz model proved to deliver expected results. 
+
+**Plot**
+
+![](https://github.com/maciej-mlynski/ModerPortfolioSimulator/blob/main/Img/walletsComparsion.png?raw=true)
+
+**Max dropdown summary**
+Portfolio type | Month	| Quater	| Year
+equalWeightedPortfolio |	-54.02%	| -56.1%	| -74.77%
+YourPortfolio	| -47.44%	| -49.24%	| -66.91%
+YourRebalancedPortfolio	| -14.97%	| -8.89%	| -13.6%
 
 
 
