@@ -80,9 +80,25 @@ In this step we compare rebalanced portfolio with unbalanced one and with portfo
 | YourRebalancedPortfolio	| -14.97%	| -8.89%	 | -13.6%  |
 
 
+**Returns summary**
+
+| Portfolio type          | Month	  | Quater	 | Year    |
+| ------------------------|---------|---------|---------|
+| equalWeightedPortfolio  |	3.27%	  | 10.15%	 | 47.98%  |
+| YourPortfolio	          | 2.6%	   | 8.0%	  	| 36.63%  |
+| YourRebalancedPortfolio	| 1.52%   | 4.64% 	 | 20.18%  |
 
 
 
+### FUTURE UPDATES
+
+1. Give more aveliable tickers / User can write ticker by hand.
+2. Posibility to cut trading days instead of repeating values for weekends.
+3. Remove most correlated assets.
+4. Improve rebalancing method: It could do rebalanceing in a specified percentage range for. eg if weight of singular asset will exceed 10% of approved weight.
+5. Deliver more summary indicators.
+6. Benchmark your investment against a benchmark such as the S&P 500 (calculate beta)
+7. Check how the parameters would change if you invested a certain amount regularly
 
 
 
