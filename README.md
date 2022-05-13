@@ -72,10 +72,11 @@ In this step we compare rebalanced portfolio with unbalanced one and with portfo
 ![](https://github.com/maciej-mlynski/ModerPortfolioSimulator/blob/main/Img/walletsComparsion.png?raw=true)
 
 **Max dropdown summary**
-Portfolio type | Month	| Quater	| Year
-equalWeightedPortfolio |	-54.02%	| -56.1%	| -74.77%
-YourPortfolio	| -47.44%	| -49.24%	| -66.91%
-YourRebalancedPortfolio	| -14.97%	| -8.89%	| -13.6%
+| Portfolio type | Month	| Quater	| Year |
+| ----------------------------------------- |
+| equalWeightedPortfolio |	-54.02%	| -56.1%	| -74.77% |
+| YourPortfolio	| -47.44%	| -49.24%	| -66.91% |
+| YourRebalancedPortfolio	| -14.97%	| -8.89%	| -13.6% |
 
 
 
