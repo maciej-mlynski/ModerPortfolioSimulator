@@ -27,10 +27,10 @@ from dateutil.relativedelta import relativedelta
 
 
 # def function that take selected tickers
-def choese_stock(SPX_, BTC_, IEF_, FILL_, PALL_):
+def choese_stock(SPX_, FXI_, GMF_, EXS1_, VGK_,DBC_, FILL_, BNO_, PICK_,SGOL_, PPLT_, SIVR_, PALL_,BTC_,IEF_):
 
     # All aveliable tickers
-    tickers = [SPX_, BTC_, IEF_, FILL_, PALL_]
+    tickers = [SPX_, FXI_, GMF_, EXS1_, VGK_,DBC_, FILL_, BNO_, PICK_,SGOL_, PPLT_, SIVR_, PALL_,BTC_,IEF_]
     
     # Tickers that user selectes
     choesen_ticker = []
@@ -54,6 +54,29 @@ def choese_stock(SPX_, BTC_, IEF_, FILL_, PALL_):
         print(f'Your choice: {choesen_ticker}')
         
     return choesen_ticker
+
+def add_stock_by_hand(tickers, new_tickers):
+    
+    for ticker in new_tickers:
+
+        # Check if ticker has not been taken already in checkbox
+        if ticker in tickers:
+                print(f'{ticker} has been already choesen priviously')
+        else:
+
+            # If no check if ticker exist in Yahoo Finance
+            try:
+                check_ticker = pdr.get_data_yahoo(ticker).first_valid_index()
+                tickers.append(ticker)
+                # If exist add to tickers array
+                print(f'{ticker} exist in Yahoo Finance and has been added to your analysis')
+
+            # If does not exist print comment
+            except:
+                print(f'{ticker} does not exist in Yahoo Finance')
+                
+    return tickers
+
 
 # function that check first day that stock is aveliable on yahoo
 # We must have all stock in same period, so the most recent day will be begining of analysis
