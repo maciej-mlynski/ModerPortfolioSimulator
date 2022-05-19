@@ -38,20 +38,69 @@ At this step user has 2 posibilities to find the best weights for his portfolio 
 1. He can select portfolio with the highest Sharp Ratio (calculated by dividind expected annual log return by expected annual volotality)
 2. Select max expected annual volatality and find the one with highest return. 
 
+![](https://github.com/maciej-mlynski/ModerPortfolioSimulator/blob/main/Img/MarkowitzModelSimulation.png?raw=true)
+
+The figure above prezents 30 000 different portfolio's annual log return vs expected volatility created by Markowitz simulation. 
+
+**Green star** is portfolio with higherst Sharp Ratio selected automaticly
+
+**Blue star** is portfolio with highest Return base on max acceptable volatality
+
+At this step user has to choese which portfolio wants to analyze. 
+
+### 6. Check portfolio weights over choesen period and do the rebalancing if necessary.
+
+In order for the Markowitz model portfolio must has specific weights over full period of invetment. Some of sotck might grow faster than another. In this step I created a function that do rebalancing. Unfortunetly, there is no point to rebalance portfolio whenever the weights sligtly change, mainly becouse of transaction cost and taxes. So we presumed that rebalancing should not be done more then one time in Quater (3 months) and not less than once a Year. User can choose which one is better for his specific case. 
+
+**Weights over time before rebalancing**
+
+![](https://github.com/maciej-mlynski/ModerPortfolioSimulator/blob/main/Img/WeightsUnbalanced.png?raw=true)
+
+--------------------------------------------------------------------------------------------------------------
+
+**Weights over time after quaterly rebalancing**
+
+![](https://github.com/maciej-mlynski/ModerPortfolioSimulator/blob/main/Img/WeightsAfterRebalanceing.png?raw=true)
+
+
+### 7. Summary and comparison
+
+In this step we compare rebalanced portfolio with unbalanced one and with portfolio with equal weights. It is important becouse we want to know if Markowitz model proved to deliver expected results. 
+
+**Plot**
+
+![](https://github.com/maciej-mlynski/ModerPortfolioSimulator/blob/main/Img/walletsComparsion.png?raw=true)
+
+**Max dropdown summary**
+
+| Portfolio type          | Month	  | Quater	 | Year    |
+| ------------------------|---------|---------|---------|
+| equalWeightedPortfolio  |	-54.02%	| -56.1%	 | -74.77% |
+| YourPortfolio	          | -47.44%	| -49.24%	| -66.91% |
+| YourRebalancedPortfolio	| -14.97%	| -8.89%	 | -13.6%  |
+
+
+**Returns summary**
+
+| Portfolio type          | Month	  | Quater	 | Year    |
+| ------------------------|---------|---------|---------|
+| equalWeightedPortfolio  |	3.27%	  | 10.15%	 | 47.98%  |
+| YourPortfolio	          | 2.6%	   | 8.0%	  	| 36.63%  |
+| YourRebalancedPortfolio	| 1.52%   | 4.64% 	 | 20.18%  |
 
 
 
+### FUTURE UPDATES
 
-
-
-
-
-
-
-
-
-
-
+1. Give more aveliable tickers / User can write ticker by hand.
+2. Posibility to cut trading days instead of repeating values for weekends.
+3. Remove most correlated assets.
+4. Improve rebalancing method: It could do rebalanceing in a specified percentage range for. eg if weight of singular asset will exceed 10% of approved weight.
+5. Deliver more summary indicators.
+6. Benchmark your investment against a benchmark such as the S&P 500 (calculate beta)
+7. Check how the parameters would change if you invested a certain amount regularly
+8. Add: Sharp ratio with risk free rate or benchmark, add Sertino Ratio and give user posibilities to choose
+9. Calculate daily VARby var or Monte Carlo simulation and propose the size of the opposite position in order to protect the capital (Black Scholes Model)
 
 
 
