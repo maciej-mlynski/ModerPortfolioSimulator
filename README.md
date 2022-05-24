@@ -21,9 +21,16 @@ User can select any date range, but it doesn't say that it will be used in next 
 
 ### 3. Data preparation
 
-That was hardest part. Mainly becouse I would like to develop a tool that users cloud compare all differents stocks. As known crypto martket is aveliable 24/7, unlikely to traditional market. Instead of reducing the number of days for the crypto market, I cloned the Friday closing prices for Saturday and Sunday in the traditional market. I was awere that some of patterns has slightly change, so I took it into account. I know that this solution has defects. For sure We can conclude that the traditional martket would be less volatality then, but in my opinion is fair move. 
+That was hardest part. Mainly becouse I would like to develop a tool that users cloud compare all differents stocks. As known crypto martket is aveliable 24/7, unlikely to traditional market, which open at business days only. 
 
-**Future improvements:** In the future I will gain posibility that user could make this decision for himself. 
+First of all, algo checks if any asset is cryptocurrency by conecting to API and checking quote type. If the anserw is YES, user can choese frequency period in year:
+
+- 365: Adding missing dates to traditional markets. It just repeats Fridays listing vales for Saturdays and Sundays.
+- 252: Cut weekend listings for any cryptocuriency user has in wallet
+
+If there is no crypto in user's portfolio the checkbox will not apear. It will just take 252 days frequency per year straight away and prepare data.
+
+**Future improvements:** In the future I will gain posibility that user could fill missing dates by mean value, calculated by mean vol before missing value occurred, instead of repeating lising values from friday. (In 365 freq case)
 
 ### 4. Markowitz Portfolio Simulation
 
