@@ -30,6 +30,8 @@ First of all, algo checks if any asset is cryptocurrency by conecting to API and
 
 If there is no crypto in user's portfolio the checkbox will not apear. It will just take 252 days frequency per year straight away and prepare data.
 
+At the end of this step function return also 'n' variable, which is choesen freq. It is important for calculating volatality, returns and rebalancing.
+
 **Future improvements:** In the future I will gain posibility that user could fill missing dates by mean value, calculated by mean vol before missing value occurred, instead of repeating lising values from friday. (In 365 freq case)
 
 ### 4. Markowitz Portfolio Simulation
@@ -99,15 +101,15 @@ In this step we compare rebalanced portfolio with unbalanced one and with portfo
 
 ### FUTURE UPDATES
 
-1. Give more aveliable tickers / User can write ticker by hand.
-2. Posibility to cut trading days instead of repeating values for weekends.
-3. Remove most correlated assets.
-4. Improve rebalancing method: It could do rebalanceing in a specified percentage range for. eg if weight of singular asset will exceed 10% of approved weight.
-5. Deliver more summary indicators.
-6. Benchmark your investment against a benchmark such as the S&P 500 (calculate beta)
-7. Check how the parameters would change if you invested a certain amount regularly
-8. Add: Sharp ratio with risk free rate or benchmark, add Sertino Ratio and give user posibilities to choose
-9. Calculate daily VARby var or Monte Carlo simulation and propose the size of the opposite position in order to protect the capital (Black Scholes Model)
+
+1. Posibility to fill missing values by mean listing price before weekend occurred (365 days freq case) 
+2. Remove most correlated assets.
+3. Improve rebalancing method: It could do rebalanceing in a specified percentage range for. eg if weight of singular asset will exceed 10% of approved weight.
+4. Deliver more summary indicators.
+5. Benchmark your investment against a benchmark such as the S&P 500 (calculate beta)
+6. Check how the parameters would change if you invested a certain amount regularly
+7. Add: Sharp ratio with risk free rate or benchmark, add Sertino Ratio and give user posibilities to choose
+8. Calculate daily VAR by varriance or Monte Carlo simulation and propose the size of the opposite position in order to protect the capital (Black Scholes Model)
 
 
 
