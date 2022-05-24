@@ -47,7 +47,7 @@ At this step user has 2 posibilities to find the best weights for his portfolio 
 1. He can select portfolio with the highest Sharp Ratio (calculated by dividind expected annual log return by expected annual volotality)
 2. Select max expected annual volatality and find the one with highest return. 
 
-![](https://github.com/maciej-mlynski/ModerPortfolioSimulator/blob/main/Img/MarkowitzModelSimulation.png?raw=true)
+![](https://github.com/maciej-mlynski/ModerPortfolioSimulator/blob/main/Img/MM_Model2.png?raw=true)
 
 The figure above prezents 30 000 different portfolio's annual log return vs expected volatility created by Markowitz simulation. 
 
