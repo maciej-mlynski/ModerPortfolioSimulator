@@ -21,7 +21,7 @@ User can select any date range, but it doesn't say that it will be used in next 
 
 ### 3. Data preparation
 
-That was hardest part. Mainly becouse I would like to develop a tool that users cloud compare all differents stocks. As known crypto martket is aveliable 24/7, unlikely to traditional market, which open at business days only. 
+That was hardest part. Mainly becouse I would like to develop a tool that users cloud compare all differents stocks. As known crypto martket is aveliable 24/7, unlikely to traditional market, which are listed at working days only. 
 
 First of all, algo checks if any asset is cryptocurrency by conecting to API and checking quote type. If the anserw is YES, user can choese frequency period in year:
 
