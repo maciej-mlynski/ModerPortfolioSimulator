@@ -12,8 +12,6 @@ Here I would like to dircribe what I have done in each step and explain theory a
 ### 1. Stocks selection
  
 User should select at least 1 stock for each markets (equity, commodity, bonds, crypto, metals, etc.). I create API that download data from Yahoo straight away.
-
-**Future improvements:** I prepare few tickers that useer can choese, but in the future I will add posibility to select any ticker aveliable on Yahoo Finance. 
  
 ### 2. Period selection
 
