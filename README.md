@@ -12,8 +12,6 @@ Here I would like to dircribe what I have done in each step and explain theory a
 ### 1. Stocks selection
  
 User should select at least 1 stock for each markets (equity, commodity, bonds, crypto, metals, etc.). I create API that download data from Yahoo straight away.
-
-**Future improvements:** I prepare few tickers that useer can choese, but in the future I will add posibility to select any ticker aveliable on Yahoo Finance. 
  
 ### 2. Period selection
 
@@ -21,9 +19,18 @@ User can select any date range, but it doesn't say that it will be used in next 
 
 ### 3. Data preparation
 
-That was hardest part. Mainly becouse I would like to develop a tool that users cloud compare all differents stocks. As known crypto martket is aveliable 24/7, unlikely to traditional market. Instead of reducing the number of days for the crypto market, I cloned the Friday closing prices for Saturday and Sunday in the traditional market. I was awere that some of patterns has slightly change, so I took it into account. I know that this solution has defects. For sure We can conclude that the traditional martket would be less volatality then, but in my opinion is fair move. 
+That was hardest part. Mainly becouse I would like to develop a tool that users cloud compare all differents stocks. As known crypto martket is aveliable 24/7, unlikely to traditional market, which are listed at working days only. 
 
-**Future improvements:** In the future I will gain posibility that user could make this decision for himself. 
+First of all, algo checks if any asset is cryptocurrency by conecting to API and checking quote type. If the anserw is YES, user can choese frequency period in year:
+
+- 365: Adding missing dates to traditional markets. It just repeats Fridays listing vales for Saturdays and Sundays.
+- 252: Cut weekend listings for any cryptocuriency user has in wallet
+
+If there is no crypto in user's portfolio the checkbox will not apear. It will just take 252 days frequency per year straight away and prepare data.
+
+At the end of this step function return also 'n' variable, which is choesen freq. It is important for calculating volatality, returns and rebalancing.
+
+**Future improvements:** In the future I will gain posibility that user could fill missing dates by mean value, calculated by mean vol before missing value occurred, instead of repeating lising values from friday. (In 365 freq case)
 
 ### 4. Markowitz Portfolio Simulation
 
@@ -38,7 +45,7 @@ At this step user has 2 posibilities to find the best weights for his portfolio 
 1. He can select portfolio with the highest Sharp Ratio (calculated by dividind expected annual log return by expected annual volotality)
 2. Select max expected annual volatality and find the one with highest return. 
 
-![](https://github.com/maciej-mlynski/ModerPortfolioSimulator/blob/main/Img/MarkowitzModelSimulation.png?raw=true)
+![](https://github.com/maciej-mlynski/ModerPortfolioSimulator/blob/main/Img/MM_Model2.png?raw=true)
 
 The figure above prezents 30 000 different portfolio's annual log return vs expected volatility created by Markowitz simulation. 
 
@@ -92,15 +99,15 @@ In this step we compare rebalanced portfolio with unbalanced one and with portfo
 
 ### FUTURE UPDATES
 
-1. Give more aveliable tickers / User can write ticker by hand.
-2. Posibility to cut trading days instead of repeating values for weekends.
-3. Remove most correlated assets.
-4. Improve rebalancing method: It could do rebalanceing in a specified percentage range for. eg if weight of singular asset will exceed 10% of approved weight.
-5. Deliver more summary indicators.
-6. Benchmark your investment against a benchmark such as the S&P 500 (calculate beta)
-7. Check how the parameters would change if you invested a certain amount regularly
-8. Add: Sharp ratio with risk free rate or benchmark, add Sertino Ratio and give user posibilities to choose
-9. Calculate daily VARby var or Monte Carlo simulation and propose the size of the opposite position in order to protect the capital (Black Scholes Model)
+
+1. Posibility to fill missing values by mean listing price before weekend occurred (365 days freq case) 
+2. Remove most correlated assets.
+3. Improve rebalancing method: It could do rebalanceing in a specified percentage range for. eg if weight of singular asset will exceed 10% of approved weight.
+4. Deliver more summary indicators.
+5. Benchmark your investment against a benchmark such as the S&P 500 (calculate beta)
+6. Check how the parameters would change if you invested a certain amount regularly
+7. Add: Sharp ratio with risk free rate or benchmark, add Sertino Ratio and give user posibilities to choose
+8. Calculate daily VAR by varriance or Monte Carlo simulation and propose the size of the opposite position in order to protect the capital (Black Scholes Model)
 
 
 
