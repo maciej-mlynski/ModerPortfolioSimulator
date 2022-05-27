@@ -102,12 +102,11 @@ In this step we compare rebalanced portfolio with unbalanced one and with portfo
 
 1. Posibility to fill missing values by mean listing price before weekend occurred (365 days freq case) 
 2. Remove most correlated assets.
-3. Improve rebalancing method: It could do rebalanceing in a specified percentage range for. eg if weight of singular asset will exceed 10% of approved weight.
-4. Deliver more summary indicators.
-5. Benchmark your investment against a benchmark such as the S&P 500 (calculate beta)
-6. Check how the parameters would change if you invested a certain amount regularly
-7. Add: Sharp ratio with risk free rate or benchmark, add Sertino Ratio and give user posibilities to choose
-8. Calculate daily VAR by varriance or Monte Carlo simulation and propose the size of the opposite position in order to protect the capital (Black Scholes Model)
+3. Deliver more summary indicators.
+4. Benchmark your investment against choesen index such as the S&P 500 (calculate beta)
+5. Check how the parameters would change if you invested a certain amount regularly
+6. Add: Sharp ratio with risk free rate or benchmark, add Sertino Ratio and give user posibilities to choose
+7. Calculate daily VAR by varriance or Monte Carlo simulation and propose the size of the hedge position in order to protect the capital base on Black Scholes Model
 
 
 
