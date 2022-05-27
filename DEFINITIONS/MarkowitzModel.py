@@ -93,7 +93,7 @@ def symulatePortfoliosWeights(df, iterations,n, calculate_N, calculate_log_rets,
 
     return results, np.array(portfolio_returns), np.array(portfolio_vol), np.array(portfolio_weights)
 
-    
+
 def createResultsPlot(results):
 
     # We want to plot volotality and return calculated base on diff weights
